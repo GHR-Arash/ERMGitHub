@@ -66,5 +66,4 @@
     <vs:platformSpecificWidget platformName="windows">
     </vs:platformSpecificWidget>
   </vs:platformSpecificValues>
-  <plugin name="cordova-sqlite-storage" version="1.4.8" />
 </widget>
