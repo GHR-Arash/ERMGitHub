@@ -30,8 +30,6 @@
 		F539947937174FA39A5C0D9D /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4FB9793E784C848AD555C2 /* Toast+UIView.m */; };
 		FD8D5E77A5AA42E1A48BDD20 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FA6F6BE32540D89C5734CF /* Toast.m */; };
 		CC749C51B43B432C90DDB380 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916FB6E93FB74273B3C1AB72 /* QuartzCore.framework */; };
-		4C121D9BF78145949207AA89 /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9236EF84504D94BC3C7E9D /* SQLitePlugin.m */; };
-		9A15D44774B24DEBA913898F /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = 5E9733058B9346808103BAA2 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-DSQLITE_TEMP_STORE=2 -DSQLITE_THREADSAFE=2 -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_RTREE -DSQLITE_LOCKING_STYLE=1 -DSQLITE_OMIT_BUILTIN_TEST -DSQLITE_OMIT_LOAD_EXTENSION"; }; };
 		6ED3436924364F23B8E1F9DD /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F3CCF7238D40F3861C80D3 /* IonicKeyboard.m */; };
 		098CEE62D7734DCB973B9721 /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E868CA73244E89BC4861BA /* AppDelegate+notification.m */; };
 		46952E482F3A4ADEA74799B7 /* PushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A19F66EFD42E8A3D3450F /* PushPlugin.m */; };
@@ -129,10 +127,6 @@
 		867BFC12783A438BB0315113 /* Toast+UIView.h */ = {isa = PBXFileReference; name = "Toast+UIView.h"; path = "cordova-plugin-x-toast/Toast+UIView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		6C774CC3FCDE4ADB9619D886 /* Toast.h */ = {isa = PBXFileReference; name = "Toast.h"; path = "cordova-plugin-x-toast/Toast.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		916FB6E93FB74273B3C1AB72 /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		3E9236EF84504D94BC3C7E9D /* SQLitePlugin.m */ = {isa = PBXFileReference; name = "SQLitePlugin.m"; path = "cordova-sqlite-storage/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		5E9733058B9346808103BAA2 /* sqlite3.c */ = {isa = PBXFileReference; name = "sqlite3.c"; path = "cordova-sqlite-storage/sqlite3.c"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		29D79291115E4105881F8FE0 /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		CC986FFA551F4166BF6976D6 /* sqlite3.h */ = {isa = PBXFileReference; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		C1F3CCF7238D40F3861C80D3 /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		EBAACFFFF85C4DCFA9EE47AB /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		B0E868CA73244E89BC4861BA /* AppDelegate+notification.m */ = {isa = PBXFileReference; name = "AppDelegate+notification.m"; path = "phonegap-plugin-push/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
@@ -372,10 +366,6 @@
 				C0FA6F6BE32540D89C5734CF /* Toast.m */,
 				867BFC12783A438BB0315113 /* Toast+UIView.h */,
 				6C774CC3FCDE4ADB9619D886 /* Toast.h */,
-				3E9236EF84504D94BC3C7E9D /* SQLitePlugin.m */,
-				5E9733058B9346808103BAA2 /* sqlite3.c */,
-				29D79291115E4105881F8FE0 /* SQLitePlugin.h */,
-				CC986FFA551F4166BF6976D6 /* sqlite3.h */,
 				C1F3CCF7238D40F3861C80D3 /* IonicKeyboard.m */,
 				EBAACFFFF85C4DCFA9EE47AB /* IonicKeyboard.h */,
 				B0E868CA73244E89BC4861BA /* AppDelegate+notification.m */,
@@ -520,8 +510,6 @@
 				C6539E6511A64C7C88387C64 /* CDVStatusBar.m in Sources */,
 				F539947937174FA39A5C0D9D /* Toast+UIView.m in Sources */,
 				FD8D5E77A5AA42E1A48BDD20 /* Toast.m in Sources */,
-				4C121D9BF78145949207AA89 /* SQLitePlugin.m in Sources */,
-				9A15D44774B24DEBA913898F /* sqlite3.c in Resources */,
 				6ED3436924364F23B8E1F9DD /* IonicKeyboard.m in Sources */,
 				098CEE62D7734DCB973B9721 /* AppDelegate+notification.m in Sources */,
 				46952E482F3A4ADEA74799B7 /* PushPlugin.m in Sources */,

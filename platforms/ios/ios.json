@@ -45,10 +45,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"ios-package\" value=\"SQLitePlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
                             "count": 1
                         },
@@ -109,9 +105,6 @@
             "PACKAGE_NAME": "com.raykam.erm"
         },
         "cordova-plugin-x-toast": {
-            "PACKAGE_NAME": "com.raykam.erm"
-        },
-        "cordova-sqlite-storage": {
             "PACKAGE_NAME": "com.raykam.erm"
         },
         "ionic-plugin-keyboard": {
@@ -376,14 +369,6 @@
             "pluginId": "cordova-plugin-x-toast"
         },
         {
-            "id": "cordova-sqlite-storage.SQLitePlugin",
-            "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
-            "pluginId": "cordova-sqlite-storage",
-            "clobbers": [
-                "SQLitePlugin"
-            ]
-        },
-        {
             "id": "ionic-plugin-keyboard.keyboard",
             "file": "plugins/ionic-plugin-keyboard/www/ios/keyboard.js",
             "pluginId": "ionic-plugin-keyboard",
@@ -411,7 +396,6 @@
         "cordova-plugin-statusbar": "2.1.3",
         "cordova-plugin-whitelist": "1.2.2",
         "cordova-plugin-x-toast": "2.5.2",
-        "cordova-sqlite-storage": "1.4.8",
         "ionic-plugin-keyboard": "1.0.9",
         "phonegap-plugin-push": "1.8.3"
     }
