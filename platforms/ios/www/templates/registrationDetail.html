@@ -1,0 +1,26 @@
+﻿<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{message.title}}" hide-nav-bar="true">
+
+    <ion-nav-buttons side="right">
+        <button class="button button-assertive ion-log-out" ng-click="logout()">
+           
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="padding raykam-content">
+        <span id="form-header">
+            <img class="raykam-image-center" src="img/logo.png" style="width:5em; top:10px" />
+            <h4 class="raykam-image-cente raykam-farsi-font" style="text-align:center">شرکت نفت و گاز پارس</h4>
+        </span>
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+        {{message.title}}
+        {{message.mainMessage}}
+    </ion-content>
+</ion-view>

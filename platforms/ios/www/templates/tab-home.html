@@ -1,0 +1,44 @@
+﻿<style>
+    .quote .item-body {
+        background-color: #f2f5f9;
+        color: white;
+    }
+
+        .quote .item-body img {
+            float: right;
+            width: 40px;
+        }
+
+        .quote .item-body p.message {
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #5b5959;
+        }
+
+        .quote .item-body p.author {
+            text-align: left;
+            color: #5b5959;
+            margin-top: 0;
+        }
+
+    .quote.card {
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+</style>
+<ion-view view-title="خانه" style="background-color: white;">
+    <ion-content>
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <div ng-repeat="image in slide" class="banner_holder">
+            <img ng-show="true" ng-src="data:image/JPEG;base64,{{image.content}}">
+        </div>
+        <div class="list card quote" ng-show="!isInProgress">
+            <div class="item item-body">
+                <p class="message">{{message.text}}</p>
+                <p class="author">{{message.from}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

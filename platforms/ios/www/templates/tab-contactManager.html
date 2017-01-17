@@ -1,0 +1,19 @@
+﻿<ion-view view-title="تماس با مدیر" hide-nav-bar="true">
+    
+    <ion-nav-buttons side="right">
+        <button class="button button-assertive ion-log-out" ng-click="logout()"></button>
+    </ion-nav-buttons>
+
+    <ion-content  >
+        <div class="button-bar">
+            <a class="button icon-center ion-archive" ng-click="changeState()"     ng-class="{'active' : active == 1}"></a>
+            <a class="button icon-center ion-forward"  ng-class="{'active' : active == 2}"></a>
+            <a class="button icon-center ion-paper-airplane"   ng-class="{'active' : active == 3}"></a>
+        </div>
+       
+       
+    </ion-content>
+
+   
+
+</ion-view>

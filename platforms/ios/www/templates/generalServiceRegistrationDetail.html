@@ -1,0 +1,85 @@
+﻿<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{generalService.title}}">
+    <!--<ion-nav-buttons side="right">
+        <button class="button button-assertive ion-log-out" ng-click="logout()">
+           
+        </button>
+    </ion-nav-buttons>-->
+    <!--<ion-nav-title>{{generalService.title}}</ion-nav-title>-->
+    <ion-content class="padding raykam-content">
+        
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <div class="list card" ng-show="!isInProgress">
+
+
+            <!--<div class="item item-divider item-icon-left raykam-positive-bg">
+                <i class="icon ion-android-alert light"></i>
+                <h3>{{generalService.title}}</h3>
+               
+            </div>-->
+            
+            <div class="item">
+                <h2>{{generalService.title}}</h2>
+            </div>
+            <div class="item item-body">
+                <p>{{generalService.description}}</p>
+                <div ng-if="generalService.registration.length>0">
+
+                    <p>
+                        <span style="font-weight:bold">وضعیت ثبت نام:  </span>
+                        <span ng-if="generalService.registration[0].isRejected==false && generalService.registration[0].isConfrimed==false">
+                            در حال بررسی
+                        </span>
+
+                        <span ng-if="generalService.registration[0].isConfrimed==true">
+                            تایید شده
+                        </span>
+
+                        <span ng-if="generalService.registration[0].isRejected==true">
+                            رد شده
+                        </span>
+                    </p>
+
+                    <p><span style="font-weight:bold">تاریخ ثبت نام : </span>{{generalService.registration[0].creationTime | jalaliDate:'jYYYY/jMM/jDD'}}</p>
+
+                    <!--<h2>وضعیت ثبت نام</h2>
+                    
+
+
+                    <p ng-if="generalService.registration[0].isRejected==false && generalService.registration[0].isConfrimed==false">
+                        در حال بررسی
+                    </p>
+
+                    <p ng-if="generalService.registration[0].isConfrimed==true">
+                        تایید شده
+                    </p>
+
+                    <p ng-if="generalService.registration[0].isRejected==true">
+                        رد شده
+                    </p>
+                    <p>{{generalService.registration[0].creationTime | jalaliDate:'jYYYY/jMM/jDD'}} :تاریخ ثبت نام </p>-->
+
+                </div>
+                <div ng-if="!generalService.registration.length>0">
+                    <p>
+                        <button class="button button-block button-positive" ng-click="registerForService(generalService.id)">
+                            رزور
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </ion-content>
+</ion-view>

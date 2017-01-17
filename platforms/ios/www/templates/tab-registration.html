@@ -1,0 +1,31 @@
+﻿<style>
+</style>
+<ion-view view-title="پیگیری ثبت نام" ng-init="getRegistrationList()">
+    <ion-content>
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+        <div ng-if="registeredServiceList.length == 0" class="card">
+            <div class="item">
+
+                <div style="text-align:center;">
+                    <i class="icon ion-sad-outline" style="font-size:30px; "></i>
+                </div>
+
+                <p style="text-align:center; margin-top:10px;">شما هنوز ثبت نامی انجام نداده اید </p>
+
+            </div>
+        </div>
+        <ion-list>
+            <ion-item href="#" ng-repeat="registration in registeredServiceList"
+                      ng-click="goToDetail(registration)">
+
+                <span>{{registration.serviceName}}</span>
+                <p style="color:#387ef5" ng-if="registration.isConfrimed">ثبت نام شما تایید شده است</p>
+                <p style="color:#387ef5" ng-if="registration.isConfrimed!=true && registration.isRejected!=true">ثبت نام شما در حال بررسی است</p>
+                <p style="color:#387ef5" ng-if="registration.isRejected">ثبت نام شما رد شده است</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

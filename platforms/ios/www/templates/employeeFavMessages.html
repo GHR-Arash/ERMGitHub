@@ -1,0 +1,76 @@
+﻿
+<ion-view>
+        <!--<ion-nav-buttons side="left">
+            <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+                <i class="icon ion-android-arrow-back"></i>
+            </button>
+        </ion-nav-buttons>-->
+
+
+        <ion-nav-title>
+            پیام های مورد علاقه
+        </ion-nav-title>
+
+
+    <!--</ion-nav-bar>-->
+    <ion-content class="padding raykam-content">
+
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+
+
+        <ion-list>
+
+            <div ng-if="messages.length == 0" class="card">
+                <div class="item">
+
+                    <div style="text-align:center;">
+                        <i class="icon ion-star" style="font-size:30px; "></i>
+                    </div>
+
+                    <p style="text-align:center; margin-top:10px;">لیست پیام های مورد علاقه ی شما خالی است</p>
+
+                </div>
+            </div>
+
+            <div class="list card" ng-repeat="message in messages">
+                <div class="item item-title">
+                    <h2>{{message.title}}</h2>
+                </div>
+                <div class="item-body " style="overflow:hidden; padding:0; margin:15px;">
+                    <div class="banner_holder" ng-if="message.thumbnail" style="height:150px;min-height:100px">
+                        <img ng-src="data:image/JPEG;base64,{{message.thumbnail}}" ng-click="openModal(message)">
+                    </div>
+                    
+                </div>
+
+                <div class="item" style="border-top:0;">
+                    <p>
+                        <div ng-bind-html="message.mainMessage"></div>
+                    </p>
+                </div>
+                <div class="item ">
+                    <p style="color:#929292; text-align:left; float: left">
+                        {{message.creationTime| jalaliDate:'jYYYY/jMM/jDD hh:mm'}}
+                        <i style="margin-left:3px;" class="icon ion-clock"></i>
+                    </p>
+
+                    <a style="font-size:25px; color:#929292" ng-click="removeMessageFromFavorite(message)">
+                        <i class="icon ion-trash-b"></i>
+
+                    </a>
+                </div>
+             
+
+            </div>
+        </ion-list>
+
+
+
+        <ion-infinite-scroll on-infinite="loadMore()" ng-if="moreDataCanBeLoaded()"
+                             distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>
