@@ -56,6 +56,7 @@
     <splash density="port-xxhdpi" src="resources\android\splash\drawable-port-xxhdpi-screen.png" />
     <splash density="port-xxxhdpi" src="resources\android\splash\drawable-port-xxxhdpi-screen.png" />
   </platform>
+  <platform name="ios" />
   <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
   <allow-navigation href="http://169.254.80.80:8100" />
   <plugin name="cordova-plugin-x-toast" version="2.5.2" />
@@ -65,4 +66,5 @@
     <vs:platformSpecificWidget platformName="windows">
     </vs:platformSpecificWidget>
   </vs:platformSpecificValues>
+  <plugin name="cordova-sqlite-storage" version="1.4.8" />
 </widget>
