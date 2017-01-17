@@ -1,0 +1,22 @@
+﻿
+<ion-view view-title="امکانات">
+    <ion-content>
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+
+
+
+        <ion-list style="direction:rtl">
+            <ion-item class="item-remove-animate item-avatar item-avatar-right item-icon-left" ng-repeat="category in categoryList"
+                      type="item-text-wrap" ng-click="goToServiceType(category)">
+                <img src="img/category/{{category.avator}}">
+                <h2>امکانات {{category.title}}</h2>
+                <p>{{category.description}}</p>
+                <i class="icon ion-chevron-left icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+﻿ <!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive" tabsPlacement="bottom"   ng-init="">
+
+    <!-- inbox Tab -->
+    <ion-tab title="پیام های دریافتی" icon-off="ion-aperture" icon-on="ion-archive" href="#/Manager/Inbox/Messages">
+        <ion-nav-view name="tab-managerInbox"></ion-nav-view>
+    </ion-tab>
+
+    <!-- sent Tab -->
+    <ion-tab title="پیام های ارسال شده " icon-off="ion-clipboard" icon-on="ion-forward" href="#/Manager/Sent/Messages">
+        <ion-nav-view name="tab-managerSent"></ion-nav-view>
+    </ion-tab>
+
+</ion-tabs>

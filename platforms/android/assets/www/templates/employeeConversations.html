@@ -1,0 +1,137 @@
+﻿<!--<ion-view>
+    <ion-nav-bar class="bar-positive" align-title="right">
+
+
+        <ion-nav-buttons side="left">
+            <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+                <i class="icon ion-android-arrow-back"></i>
+            </button>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+    <ion-content class="raykam-content">
+
+        <ion-list>
+            <ion-item ng-repeat="message in conversations" type="item-text-wrap" href="#/tab/employeeInboxMessage/{{message.id}}">
+                <p style="color:#387ef5; text-align: left; font-size:12px">{{message.creationTime| jalaliDate:'jYYYY/jMM/jDD hh:mm'}}</p>
+                <p>{{message.message}}</p>
+                <p ng-if="message.isSentMessage==true">شما</p>
+                <p ng-if="message.isSentMessage!=true">مدیر</p>
+            </ion-item>
+
+        </ion-list>
+
+
+        <button ng-click="sendMessageToManager()" class="button button-full button-balanced ink"><h5 style="color:white;font-family:'yekan'">ارسال</h5></button>
+
+        <textarea style="resize:none" rows="6" maxlength="500" class="raykam-input-text" ng-model="newMessage.MainMessage" placeholder="متن"  />
+
+
+
+    </ion-content>
+</ion-view>-->
+
+
+<ion-view id="userMessagesView"
+          cache-view="false"
+          view-title="تماس با {{toUser.username}}">
+          <!--view-title="<i class='icon ion-chatbubble user-messages-top-icon'></i> <div class='msg-header-username'>{{toUser.username}}</div>">-->
+
+    <!--<ion-nav-bar class="bar-positive" align-title="right">-->
+
+
+    <!--<ion-nav-buttons side="left">
+        <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+            <i class="icon ion-android-arrow-back"></i>
+        </button>
+    </ion-nav-buttons>-->
+
+    <!--</ion-nav-bar>-->
+    <!--<div class="loader-center" ng-if="!doneLoading">
+        <div class="loader">
+            <i class="icon ion-loading-c"></i>
+        </div>
+    </div>-->
+
+    <ion-content style="background-image:url('img/bg_messages.png')" has-bouncing="true" class="has-header has-footer chat-page"
+                 delegate-handle="userMessageScroll">
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <div ng-if="messages.length == 0" class="card">
+            <div class="item">
+
+                <div style="text-align:center;">
+                    <i class="icon ion-sad-outline" style="font-size:30px; "></i>
+                </div>
+
+                <p style="text-align:center; margin-top:10px;">هیچ گفتگویی صورت نگرفته است</p>
+
+            </div>
+        </div>
+        <div ng-repeat="message in messages" class="message-wrapper"
+             on-hold="onMessageHold($event, $index, message)">
+
+            <!--مدیر-->
+            <!--<div ng-if="user._id !== message.userId">-->
+            <div ng-if="message.isSentMessage == false">
+
+                <img ng-click="viewProfile(message)" class="profile-pic left"
+                     ng-src="{{toUser.pic}}" onerror="onProfilePicError(this)" />
+
+                <div class="chat-bubble left">
+
+                    <div class="message" ng-bind-html="message.text | nl2br" autolinker>
+                    </div>
+
+                    <div class="message-detail">
+                        <span ng-click="viewProfile(message)"
+                              class="bold">{{toUser.username}}</span>,
+                        <span am-time-ago="message.date"></span>
+                    </div>
+
+                </div>
+            </div>
+            <!--کاربر-->
+            <!--<div ng-if="user._id === message.userId">-->
+            <div ng-if="message.isSentMessage == true">
+
+                <img ng-click="viewProfile(message)" class="profile-pic right"
+                     ng-src="{{user.pic}}" onerror="onProfilePicError(this)" />
+
+                <div class="chat-bubble right">
+
+                    <div class="message" ng-bind-html="message.text | nl2br" autolinker>
+                    </div>
+
+                    <div class="message-detail">
+                        <span ng-click="viewProfile(message)"
+                              class="bold">{{user.username}}</span>,
+                        <span am-time-ago="message.date"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="cf"></div>
+
+        </div>
+    </ion-content>
+
+    <form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+        <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+            <label style="direction:rtl;" class="item-input-wrapper chat-text">
+                <textarea ng-model="input.message" value="" placeholder="متن پیام" required minlength="1" maxlength="1500" msd-elastic></textarea>
+            </label>
+            <div class="footer-btn-wrap">
+                <button class="button button-icon icon ion-android-send footer-btn" type="submit"
+                        ng-disabled="!input.message || input.message === ''"></button>
+            </div>
+        </ion-footer-bar>
+    </form>
+
+</ion-view>

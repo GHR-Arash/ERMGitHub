@@ -1,0 +1,28 @@
+﻿
+<ion-view view-title="پیام ها ">
+    <ion-content>
+
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <ion-list ng-repeat="messageList in serviceTypes">
+
+            <ion-item class="item-divider" type="item-text-wrap">
+                {{messageList[0].serviceTypeName}}
+            </ion-item>
+
+            <ion-item ng-repeat="message in messageList"
+                      type="item-text-wrap" href="#/tab/messageDetail/{{message.messageId}}">
+                <h2 style="float:right" ng-class="{'unReadMessage':message.isRead!=true}">{{message.title}}</h2>
+                <p style="color:#387ef5; text-align: left; font-size:12px; direction:ltr;">{{message.creationTime| jalaliDate:'jYYYY/jMM/jDD hh:mm'}}<i style="margin-left:3px;" class="icon ion-clock"></i></p>
+                <p>{{message.shortMessage}}</p>
+
+            </ion-item>
+
+        </ion-list>
+
+    </ion-content>
+</ion-view>

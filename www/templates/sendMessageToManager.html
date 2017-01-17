@@ -1,0 +1,39 @@
+﻿
+<ion-view>
+
+
+    <ion-nav-bar class="bar-positive" align-title="right">
+
+
+        <ion-nav-buttons side="left">
+            <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+                <i class="icon ion-android-arrow-back"></i>
+            </button>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+    
+    <ion-content class="raykam-content">
+        <span id="form-header">
+            <img class="raykam-image-center" src="img/logo.png" style="width:5em; top:10px" />
+            <h4 class="raykam-image-cente raykam-farsi-font" style="text-align:center">شرکت نفت و گاز پارس</h4>
+        </span>
+
+        <div class="list list-inset">
+            <div class="padding">
+                <button ng-click="sendMessageToManager()" ng-disabled="!message.Title.length || !message.MainMessage" class="button button-full button-balanced ink"><h5 style="color:white;font-family:'yekan'">ارسال</h5></button>
+
+            </div>
+            <div class="padding">
+                <label class="item item-input">
+                    <i class="ion-ios-pricetags placeholder-icon"></i>
+                    <input class="raykam-input-text" ng-model="message.Title" placeholder="عنوان" type="text" />
+                </label>
+                <label class="item item-input">
+                    <i class="ion-compose placeholder-icon"></i>
+                    <textarea style="resize:none" rows="6" maxlength="500"  class="raykam-input-text" ng-model="message.MainMessage" placeholder="متن" type="password" />
+                </label>    
+                </div>
+        </div>
+    </ion-content>
+</ion-view>

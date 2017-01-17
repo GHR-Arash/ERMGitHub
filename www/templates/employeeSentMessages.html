@@ -1,0 +1,52 @@
+﻿<!--<ion-view hide-nav-bar="true">
+
+    <ion-content class="raykam-content">
+    
+        <span id="form-header">
+            <img class="raykam-image-center" src="img/logo.png" style="width:5em; top:10px" />
+            <h4 class="raykam-image-cente raykam-farsi-font" style="text-align:center">شرکت نفت و گاز پارس</h4>
+        </span>
+
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="list list-inset">
+            <ion-item class="item item-remove-animate item-avatar item-icon-left item-icon-right" ng-repeat="message in messageList" type="item-text-wrap"   ng-click="goToDetail(message.id)" >
+
+                <div>
+                   
+                    <i class="icon icon ion-paper-airplane" style="color:#4F8EF7"></i>
+
+                    <h2>{{message.title}}</h2>
+                    <p>{{message.creationTime| jalaliDate:'jYYYY/jMM/jDD'}}</p>
+
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </div>
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>-->
+
+
+<ion-view view-title="ارسال شده">
+
+    <ion-content class="raykam-content">
+
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <ion-list>
+            <ion-item ng-repeat="message in messageList" type="item-text-wrap" ng-click="goToDetail(message.id)">
+                <h2 style="float:right">{{message.title}}</h2>
+                <p style="color:#387ef5; text-align: left; font-size:12px">{{message.creationTime| jalaliDate:'jYYYY/jMM/jDD'}}</p>
+                <p>{{message.shortMessage}}</p>
+                <!--<i class="icon ion-chevron-left"></i>-->
+            </ion-item>
+
+        </ion-list>
+
+    </ion-content>
+</ion-view>

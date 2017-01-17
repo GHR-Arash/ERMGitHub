@@ -1,0 +1,50 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "763986669211",
+            "PACKAGE_NAME": "com.raykam.erm"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.raykam.erm"
+        }
+    }
+}

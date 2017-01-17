@@ -1,0 +1,28 @@
+﻿<ion-view>
+    <ion-nav-bar class="bar-positive" align-title="center">
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-arrow-left-c" style="color:white"></i> 
+        </ion-nav-back-button>
+        <ion-nav-title>
+            <h4 style="color:white">ثبت نام</h4>
+        </ion-nav-title>
+    </ion-nav-bar>
+
+
+    <ion-content class="login-box">
+        <div id="form-header" style="margin-top:20px">
+            <img class="raykam-image-center" src="img/logo.png" style="width:130px;" />
+        </div>
+
+        <div class="padding login">
+            <div class="list">
+                <ion-md-input ng-model="loginModel.mobileNumber" maxlength="12" type="tel" placeholder="شماره همراه" hightlight-color="positive"></ion-md-input>
+            </div>
+        </div>
+
+        <div class="padding">
+            <button ng-disabled="loginModel.mobileNumber.length<11" ng-click="signup()" class="button button-full button-positive ink">ثبت نام</button>
+        </div>
+
+    </ion-content>
+</ion-view>

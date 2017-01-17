@@ -1,0 +1,431 @@
+﻿body {
+    font-family: yekan;
+}
+
+.raykam-positive-bg {
+    background-color: #0c60ee;
+}
+
+.unReadMessage {
+    font-weight: bold !important;
+    /*font-size:1.5em !important;*/
+}
+
+.raykam-error {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*stop place spinner in center of  page*/
+.raykam-spinner-center {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 85px;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+.item.ng-enter {
+    -webkit-animation: fadeInLeft 1s;
+    animation: fadeInLeft 1s;
+}
+
+.item.ng-enter-stagger {
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+    /* override to make sure it's not inherited from other styles */
+    -webkit-animation-duration: 0;
+    animation-duration: 0;
+}
+
+.raykam-farsi-font {
+    font-family: yekan;
+}
+
+
+.raykam-input-text {
+    border-left-style: solid !important;
+    border-left-width: 4px !important;
+    border-left-color: #387ef5 !important;
+}
+
+.raykam-image-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+
+.raykam-content {
+    /*background-image:url(../img/background.jpg) !important;
+    background-position:center !important;
+    background-size:cover !important;*/
+    background-color: #f5f5f5;
+    /*background-image: url(img/login.jpg)center; background-size: cover;*/
+}
+
+@font-face {
+    font-family: 'yekan';
+    src: url('fonts/Yekan.eot');
+    src: url('fonts/Yekan.eot') format('embedded-opentype'), url('fonts/Yekan.woff2') format('woff2'), url('fonts/Yekan.woff') format('woff'), url('fonts/Yekan.ttf') format('truetype'), url('fonts/Yekan.svg#Yekan') format('svg');
+}
+
+/*.back-button {
+    color:blue !important;
+}
+
+
+.bar{
+    box-shadow:none !important;
+}*/
+
+/*.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+    border-color:#084eda !important;
+   
+
+}*/
+
+/*.tabs-striped .tabs {
+    background-color:#E8EAF6 !important;
+
+}*/
+
+/*.bar-header {
+    background-color:#3F51B5 !important;
+    color:white;
+    text-align:center;
+
+}*/
+
+.raykam-tab-nested {
+    top: 2px;
+    z-index: 100;
+}
+
+
+
+
+.applyFooter {
+    margin-bottom: 44px !important;
+}
+
+.splashLogo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button {
+    font-family: yekan !important;
+}
+
+ion-nav-title > span {
+    font-family: yekan !important;
+}
+
+.tab-title {
+    font-family: yekan !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, div, span {
+    font-family: yekan !important;
+}
+
+
+.button.button-red {
+    border-color: transparent;
+    background-color: #e6335c;
+    color: #fff;
+}
+
+.item-divider {
+    color: #9c9c9c;
+}
+
+.banner_holder {
+    width: 100%;
+    /*height: 300px;*/
+    min-height: 200px;
+    position: relative;
+    /*outline: 1px dotted red;*/
+    margin-bottom: 15px;
+}
+
+    .banner_holder img {
+        width: 100%;
+    }
+
+
+
+/*CHAT*/
+
+/* allows the bar-footer to be elastic /*
+    /* optionally set a max-height */
+/* maxlength on the textarea will prevent /*
+    /* it from getting too large also */
+.bar-footer {
+    overflow: visible !important;
+}
+
+    .bar-footer textarea {
+        resize: none;
+        height: 25px;
+    }
+
+/* fixes an ios bug bear */
+button.ion-android-send {
+    padding-top: 2px;
+}
+
+/* add this to keep your footer buttons down
+    at the bottom as the textarea resizes */
+.footer-btn-wrap {
+    position: relative;
+    height: 100%;
+    width: 50px;
+    top: 7px;
+}
+
+.footer-btn {
+    position: absolute !important;
+    bottom: 0;
+}
+
+img.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+}
+
+    img.profile-pic.left {
+        left: 10px;
+    }
+
+    img.profile-pic.right {
+        right: 10px;
+    }
+
+.ion-email {
+    float: right;
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+.message {
+    font-size: 14px;
+}
+
+.message-detail {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.bar.item-input-inset .item-input-wrapper input {
+    width: 100% !important;
+}
+
+.message-wrapper {
+    position: relative;
+}
+
+    .message-wrapper:last-child {
+        margin-bottom: 10px;
+    }
+
+.chat-bubble {
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    margin: 10px;
+    max-width: 80%;
+}
+
+    .chat-bubble:before {
+        content: "\00a0";
+        display: block;
+        height: 16px;
+        width: 9px;
+        position: absolute;
+        bottom: -7.5px;
+    }
+
+    .chat-bubble.left {
+        background-color: #e6e5eb;
+        float: left;
+        margin-left: 55px;
+    }
+
+        .chat-bubble.left:before {
+            background-color: #e6e5eb;
+            left: 10px;
+            -webkit-transform: rotate(70deg) skew(5deg);
+        }
+
+    .chat-bubble.right {
+        background-color: #158ffe;
+        color: #fff;
+        float: right;
+        margin-right: 55px;
+    }
+
+        .chat-bubble.right:before {
+            background-color: #158ffe;
+            right: 10px;
+            -webkit-transform: rotate(118deg) skew(-5deg);
+        }
+
+        .chat-bubble.right a.autolinker {
+            color: #fff;
+            font-weight: bold;
+        }
+
+.user-messages-top-icon {
+    font-size: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    right: 5px;
+}
+
+.msg-header-username {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+}
+
+.chat-text input, .chat-text textarea, .chat-text .item-input, .chat-text.item-input-wrapper {
+    background-color: #f4f4f4 !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.cf {
+    clear: both !important;
+}
+
+a.autolinker {
+    color: #3b88c3;
+    text-decoration: none;
+}
+
+/* loading */
+.loader-center {
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.loader .ion-loading-c {
+    font-size: 64px;
+}
+/*END OF CHAT*/
+
+
+
+/*LOGIN*/
+.item-md-label input {
+    /*background-color: #f1f1f1;
+        color: #808080;*/
+    padding-right: 5px !important;
+    letter-spacing: 0;
+}
+
+.item-md-label .input-label {
+    color: #808080;
+    font-family: yekan !important;
+    letter-spacing: 0;
+    text-align: right;
+}
+
+label.item-md-label {
+    /*border-color: transparent;
+        padding-left:0;*/
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    padding-top: 33px;
+}
+
+.padding.login {
+    padding: 20px;
+}
+
+.button {
+    border-radius: 5px;
+}
+
+.login-box {
+    direction: rtl;
+    background-color: #f4f4f5;
+}
+
+/*END OF LOGIN*/
+
+
+.modal .scroll {
+    height: 100% !important;
+    background-color: black !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-box-direction: normal !important;
+    -moz-box-direction: normal !important;
+    -webkit-box-orient: horizontal !important;
+    -moz-box-orient: horizontal !important;
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    -webkit-box-align: center !important;
+    -moz-box-align: center !important;
+    -webkit-align-items: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+.popup-body {
+    text-align:right;
+}

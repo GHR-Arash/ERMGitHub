@@ -1,0 +1,26 @@
+﻿
+
+
+
+<ion-view view-title="دریافت شده">
+
+    <ion-content class="raykam-content">
+        
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+
+
+        <ion-list>
+            <ion-item ng-repeat="message in messageList" type="item-text-wrap" href="#/tab/employeeInboxMessage/{{message.id}}">
+                <h2 style="float:right" ng-class="{'unReadMessage':message.isRead==false}">{{message.title}}</h2>
+                <p style="color:#387ef5; text-align: left; font-size:12px">{{message.creationTime| jalaliDate:'jYYYY/jMM/jDD hh:mm'}}</p>
+                <p>{{message.shortMessage}}</p>
+                <!--<i class="icon ion-chevron-left"></i>-->
+            </ion-item>
+
+        </ion-list>
+
+    </ion-content>
+</ion-view>

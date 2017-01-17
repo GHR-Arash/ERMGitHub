@@ -1,0 +1,23 @@
+﻿
+<ion-view view-title="گروه ها">
+    <ion-content>
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+
+
+
+        <ion-list style="direction:rtl">
+            <ion-item class="item-remove-animate item-avatar item-avatar-right item-icon-left" ng-repeat="group in groups"
+                      type="item-text-wrap" ng-click="goToEmployeeMessages(group)">
+                <img src="img/category/{{group.icon}}">
+                <h2>{{group.title}}</h2>
+                <p>{{group.lastMessage}}</p>
+                <span style="left:32px; right:inherit;" ng-if="group.unreadCount > 0" class="badge badge-balanced">{{group.unreadCount}}</span>
+                <!--<i class="icon ion-chevron-left icon-accessory"></i>-->
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

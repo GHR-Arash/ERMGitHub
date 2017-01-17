@@ -1,0 +1,20 @@
+﻿
+<ion-view view-title="Login" align-title="left" hide-nav-bar="true">
+    <ion-content class="login-box">
+        <div id="form-header" style="margin-top:20px">
+            <img class="raykam-image-center" src="img/logo.png" style="width:130px;" />
+        </div>
+        <div class="padding login">
+            <div class="list">
+
+                <ion-md-input ng-model="loginModel.userName" placeholder="شماره همراه" hightlight-color="positive" type="text"></ion-md-input>
+
+                <ion-md-input ng-model="loginModel.password" placeholder="گذرواژه" hightlight-color="positive" type="password"></ion-md-input>
+            </div>
+        </div>
+        <div class="padding">
+            <button ng-click="login()" class="button button-full button-positive ink">ورود</button>
+            <button ng-click="signup()" class="button button-full button-balanced ink">ثبت نام</button>
+        </div>
+    </ion-content>
+</ion-view>

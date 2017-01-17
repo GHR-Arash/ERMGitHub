@@ -1,0 +1,31 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "RAYKAM.ERM"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "RAYKAM.ERM"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "RAYKAM.ERM"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "RAYKAM.ERM"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "RAYKAM.ERM"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "763986669211",
+            "PACKAGE_NAME": "com.raykam.erm"
+        }
+    },
+    "dependent_plugins": {}
+}

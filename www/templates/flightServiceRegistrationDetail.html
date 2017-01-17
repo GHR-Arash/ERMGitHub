@@ -1,0 +1,61 @@
+﻿<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view hide-nav-bar="true">
+    <ion-nav-buttons side="right">
+        <button class="button button-assertive ion-log-out" ng-click="logout()">
+           
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-title>{{flightService.title}}</ion-nav-title>
+    <ion-content class="padding raykam-content">
+        <span id="form-header">
+            <img class="raykam-image-center" src="img/logo.png" style="width:5em; top:10px" />
+            <h4 class="raykam-image-cente raykam-farsi-font" style="text-align:center">شرکت نفت و گاز پارس</h4>
+        </span>
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <div class="list card" ng-show="!isInprogress">
+            <div class="item item-divider item-icon-left raykam-positive-bg">
+                <i class="icon ion-android-alert light"></i>
+                <h3>{{flightService.title}}</h3>
+            </div>
+            <div class="item item-body">
+                <p>{{flightService.description}}</p>
+                <p>تاریخ رفت :{{flightService.departureDate | jalaliDate:'jYYYY/jMM/jDD'}}</p>
+                <p>هواپیمایی:{{flightService.airline}}</p>
+                <p>میداء:{{flightService.from}}</p>
+                <p>مقصد:{{flightService.to}}</p>
+
+                <div ng-if="flightService.registration.length>0">
+                    <h2>وضعیت ثبت نام</h2>
+                    
+
+
+                    <p ng-if="flightService.registration[0].isRejected==false && flightService.registration[0].isConfrimed==false">
+                        در حال بررسی
+                    </p>
+
+                    <p ng-if="flightService.registration[0].isConfrimed==true">
+                        تایید شده
+                    </p>
+
+                    <p ng-if="flightService.registration[0].isRejected==true">
+                        رد شده
+                    </p>
+                    <p>{{flightService.registration[0].creationTime | jalaliDate:'jYYYY/jMM/jDD'}} :تاریخ ثبت نام </p>
+
+                </div>
+                <div ng-if="!flightService.registration.length>0">
+                    <p>
+                        <button class="button button-block button-positive" ng-click="registerForService(flightService.id)" ng-disabled="isInProgress" ng-if="!DidregisterForService">
+                            رزور
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

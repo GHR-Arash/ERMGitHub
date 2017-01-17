@@ -1,0 +1,85 @@
+﻿
+<style>
+    .profileImage {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        margin: 5px 0;
+        float: right;
+        margin-left: 10px;
+    }
+
+    .item.chat {
+        padding-top: 5px !important;
+        padding-bottom:5px !important;
+    }
+</style>
+
+<ion-view view-title="دریافت شده">
+    <!--<ion-nav-bar class="bar-positive" align-title="right">
+
+        <ion-nav-buttons side="left">
+            <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+                <i class="icon ion-android-arrow-back"></i>
+            </button>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>-->
+    <ion-content>
+
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <div ng-if="conversations.length == 0" class="card">
+            <div class="item">
+
+                <div style="text-align:center;">
+                    <i class="icon ion-sad-outline" style="font-size:30px; "></i>
+                </div>
+
+                <p style="text-align:center; margin-top:10px;">هیچ گفتگویی صورت نگرفته است</p>
+
+            </div>
+        </div>
+        <ion-list style="direction:rtl">
+            <ion-item class="item item-icon-left chat" style="padding-bottom:0; padding-top:0;"
+                      ng-repeat="message in conversations"
+                      type="item-text-wrap" ng-click="goToState('tab.managerConversationsByEmployee',message)">
+                <div style="background-color:{{message.profileColor}}" class="profileImage">{{message.firstLetter}}</div>
+                <h2 style="margin-top: 10px;">{{message.employeeFullName}}</h2>
+                <p>{{message.creationTime| jalaliDate:'jYYYY/jMM/jDD hh:mm'}}</p>
+                <!--<i class="icon ion-chevron-right"></i>-->
+                <span style="left:32px; right:inherit;" ng-if="message.totalUnreadMessage > 0" class="badge badge-balanced">{{message.totalUnreadMessage}}</span>
+            </ion-item>
+        </ion-list>
+
+
+         <!--<ion-list>
+            <ion-item class="item item-icon-left category" ng-repeat="serviceType in serviceTypeList" 
+                      ng-click="goToState(serviceType)" href="">
+                <i class="fa fa-{{serviceType.icon}}" style=""></i>
+
+                <h2>{{serviceType.title}}</h2>
+                <p>{{serviceType.description}}</p>-->
+                <!--<i class="icon ion-chevron-right"></i>-->
+            <!--</ion-item>
+        </ion-list>-->
+
+
+        <!--<ion-list>
+            <ion-item ng-repeat="message in conversations" type="item-text-wrap" href="#/managerConversationsByEmployee/{{message.employeeId}}">
+
+                <p style="color:#387ef5; text-align: left; font-size:12px">{{message.creationTime| jalaliDate:'jYYYY/jMM/jDD hh:mm'}}</p>
+                <p>{{message.employeeFullName}}</p>
+            </ion-item>
+
+        </ion-list>-->
+
+    </ion-content>
+</ion-view>

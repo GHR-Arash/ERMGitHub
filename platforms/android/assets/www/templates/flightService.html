@@ -1,0 +1,46 @@
+﻿<ion-view view-title="{{serviceTypeName}}">
+   
+    <ion-content class="raykam-content">
+
+        
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+
+
+        <div ng-if="flightServiceList.length == 0" class="card">
+            <div class="item">
+                <div style="text-align:center;">
+                    <i class="icon ion-sad-outline" style="font-size:30px; "></i>
+                </div>
+                <p style="text-align:center; margin-top:10px;">سرویسی به شما تعلق نگرفته است</p>
+            </div>
+        </div>
+
+        <ion-item class="item item-icon-left" ng-repeat="flightService in flightServiceList" type="item-text-wrap" ng-click="goToDetail(flightService)">
+            <h2>{{flightService.title}}</h2>
+            <i class="icon ion-chevron-left icon-accessory"></i>
+
+        </ion-item>
+
+
+        <!--<div class="list list-inset">
+            <ion-item class="item item-remove-animate item-avatar item-icon-right" ng-repeat="flightService in flightServiceList" type="item-text-wrap" ng-click="goToDetail(flightService)" href="" >
+
+
+                <div>
+             
+                    <i ng-if="flightService.registration && flightService.registration[0].isRejected==false && flightService.registration[0].isConfrimed==false" class="icon ion-help-circled" style="color:#ff6a00"></i>
+
+                    <i ng-if="flightService.registration && flightService.registration[0].isConfrimed==true" class="iconion-checkmark-round" style="color:#00ff21"></i>
+
+                    <i ng-if="flightService.registration && flightService.registration[0].isRejected==true" class="icon ion-close-circled" style="color:#b200ff"></i>
+
+                </div>
+              
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </div>-->
+    </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+﻿<ion-view view-title="پیام ها " hide-nav-bar="true">
+   
+    <ion-nav-buttons side="right">
+        <button class="button button-assertive ion-log-out" ng-click="logout()">
+           
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="raykam-content">
+        <span id="form-header">
+            <img class="raykam-image-center" src="img/logo.png" style="width:5em; top:10px" />
+            <h4 class="raykam-image-cente raykam-farsi-font" style="text-align:center">شرکت نفت و گاز پارس</h4>
+        </span>
+
+        <ion-spinner ng-show="isInProgress" class="raykam-spinner-center"></ion-spinner>
+        <ion-refresher pulling-text=""
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+<div class="list list-inset">
+            <ion-item class="item item-remove-animate item-avatar item-icon-left item-icon-right" ng-repeat="message in messageList" type="item-text-wrap" href="#/tab/messageDetail/{{message.id}}">
+    
+                    <div>
+                        <i class="icon icon ion-android-drafts" style="color:#00ff21" ng-if="message.isRead==true"></i>
+                        <i class="icon icon ion-android-mail"  style="color:#b200ff" ng-if="message.isRead==false"></i>
+
+                        <h2 ng-class="{'unReadMessage':message.isRead!=true}">{{message.title}}</h2>
+                        <p>{{message.creationTime| jalaliDate:'jYYYY/jMM/jDD'}}</p>
+
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+                                            </div>     
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>
