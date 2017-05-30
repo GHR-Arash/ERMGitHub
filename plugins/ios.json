@@ -19,9 +19,6 @@
         "cordova-plugin-file-transfer": {
             "PACKAGE_NAME": "com.raykam.erm"
         },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.raykam.erm"
-        },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.raykam.erm"
         },
@@ -33,6 +30,9 @@
         },
         "phonegap-plugin-push": {
             "SENDER_ID": "763986669211",
+            "PACKAGE_NAME": "com.raykam.erm"
+        },
+        "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.raykam.erm"
         }
     },

@@ -28,9 +28,6 @@
     <feature name="FileTransfer">
         <param name="ios-package" value="CDVFileTransfer" />
     </feature>
-    <feature name="NetworkStatus">
-        <param name="ios-package" value="CDVConnection" />
-    </feature>
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" />
         <param name="onload" value="true" />
@@ -85,4 +82,7 @@
     <preference name="SplashScreenDelay" value="0" />
     <preference name="android-targetSdkVersion" value="19" />
     <preference name="Fullscreen" value="False" />
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
 </widget>
