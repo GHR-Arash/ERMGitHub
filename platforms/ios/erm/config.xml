@@ -56,6 +56,7 @@
         <vs:platformSpecificWidget platformName="windows">
         </vs:platformSpecificWidget>
     </vs:platformSpecificValues>
+    <preference name="target-device" value="handset" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="true" />
