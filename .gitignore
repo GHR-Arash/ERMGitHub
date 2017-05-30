@@ -240,3 +240,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/platforms/android/assets/www/IosDistribution.p12
+/platforms/android/assets/www/ios_distribution.cer
+/platforms/android/assets/www/readmeCertificate.txt
+/platforms/android/assets/www/readme.txt
